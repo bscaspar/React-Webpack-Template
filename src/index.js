@@ -6,7 +6,7 @@ import HelloWorld from './components/hello_world'
 class App extends Component {
     constructor(props){
         super(props);
-
+        console.log("hi");
         this.state = { }
     }
     

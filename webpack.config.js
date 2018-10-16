@@ -1,22 +1,35 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin') ;
 const path = require('path');
+
 
 const config = {
     'mode': 'development',
-    entry: './src/index.js',
+    entry: {
+        bundle: './src/index.js'
+    },
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: 'bundle.js',
-        publicPath: 'build'
+        filename: '[name].[chunkhash].js'
     },
     module: {
         rules: [
             {
-               use: 'jsx-loader?harmony',
-               test: /\.jsx$/ 
+                exclude: /node_modules/,
+                loader: 'babel-loader',
+                test: /\.js$/
             }
 
         ]
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: 'src/index.html'
+        }),
+        new CleanWebpackPlugin(
+            ['build']
+        )
+    ]
 }
 
 module.exports = config;
