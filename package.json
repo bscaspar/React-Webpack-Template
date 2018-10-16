@@ -1,0 +1,17 @@
+{
+  "name": "bs_site",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jsx-loader": "^0.13.2",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.1.5"
+  }
+}
