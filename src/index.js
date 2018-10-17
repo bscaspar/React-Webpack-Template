@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
@@ -11,7 +10,3 @@ const App = () => {
 }
 
 ReactDOM.render(<App />, document.querySelector('.container'));
-=======
-const helloWorld = "Hello World";
-const newBranch = {};
->>>>>>> refs/remotes/origin/master
