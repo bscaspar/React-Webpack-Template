@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-class HelloWorld extends Component {
+class WelcomePage extends Component {
     render(){
         return (
         <div>
-            {this.props.statement}
+            {this.props.message}
         </div>
         )
     }
 }
-export default HelloWorld;
+export default WelcomePage;

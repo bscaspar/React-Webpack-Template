@@ -1,20 +1,12 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-import HelloWorld from './components/hello_world'
+import Routes from './router';
 
-class App extends Component {
-    constructor(props){
-        super(props);
-        this.state = { statement: "Hello world" }
-    }
-    
-    render(){
-        return(
-            <HelloWorld statement = {this.state.statement}/>
-        )
-    }
-
+const App = () => {
+    return(
+        <Routes />
+    )
 }
 
 ReactDOM.render(<App />, document.querySelector('.container'));
