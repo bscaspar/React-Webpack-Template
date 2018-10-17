@@ -25,7 +25,6 @@ const config = {
                 loader: 'babel-loader',
                 test: /\.js$/
             }
-
         ]
     },
     plugins: [
@@ -34,7 +33,10 @@ const config = {
         }),
         new CleanWebpackPlugin(
             ['build']
-        )
+        ),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV) //the NODE_ENV var comes from the package.json file where we can set it to "production". If not defined, webpack assumes not production. In production, it removes additional checks to optimize for speed and efficiency.
+        })
     ],
     optimization: {
         splitChunks: {
