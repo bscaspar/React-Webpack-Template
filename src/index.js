@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Routes from './router';
+
 
 const App = () => {
     return(
@@ -9,4 +10,6 @@ const App = () => {
     )
 }
 
-ReactDOM.render(<App />, document.querySelector('.container'));
+ReactDOM.render(
+    <App />, 
+    document.querySelector('.container'));

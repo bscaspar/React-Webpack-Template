@@ -39,6 +39,14 @@ const config = {
     optimization: {
         splitChunks: {
         }
+    },
+    devServer: {
+        contentBase: './build',
+        historyApiFallback: true,
+        watchOptions: {
+            aggregateTimeout: 300,
+            poll: 1000
+        }
     }
 }
 
