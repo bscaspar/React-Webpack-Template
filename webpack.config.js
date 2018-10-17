@@ -1,12 +1,18 @@
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin') ;
 const path = require('path');
+
+const VENDOR_LIBS = [
+    'react','react-dom'
+]
 
 
 const config = {
     'mode': 'development',
     entry: {
-        bundle: './src/index.js'
+        bundle: './src/index.js',
+        vendor: VENDOR_LIBS
     },
     output: {
         path: path.resolve(__dirname, 'build'),
@@ -29,7 +35,11 @@ const config = {
         new CleanWebpackPlugin(
             ['build']
         )
-    ]
+    ],
+    optimization: {
+        splitChunks: {
+        }
+    }
 }
 
 module.exports = config;

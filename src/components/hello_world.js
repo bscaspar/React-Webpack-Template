@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 
-const HelloWorld = () => {
-    return (
+class HelloWorld extends Component {
+    render(){
+        return (
         <div>
-            Hello World!
+            {this.props.statement}
         </div>
-    )
+        )
+    }
 }
-
 export default HelloWorld;
