@@ -1,10 +1,10 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin') ;
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const path = require('path');
 
 const VENDOR_LIBS = [
-    'react','react-dom'
+    'react', 'react-dom'
 ]
 
 
